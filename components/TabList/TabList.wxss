@@ -1,0 +1,22 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.tabs_title {
+  display: flex;
+  height: 8.3vh;
+}
+.tabs_title view {
+  flex: 1;
+  height: 8.3vh;
+  line-height: 8.3vh;
+  text-align: center;
+}
+.active {
+  border-bottom: 2rpx solid red;
+}
+
+.tabs_con {
+  flex: 1;
+}

@@ -1,0 +1,4 @@
+{
+  "usingComponents": { "TabList": "../../components/TabList/TabList" },
+  "navigationBarTitleText": "订单查询"
+}

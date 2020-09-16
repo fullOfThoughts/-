@@ -1,0 +1,21 @@
+<view>
+  <SearchInput></SearchInput>
+  <view class="category">
+    <scroll-view class="category_scroll" scroll-y upper-threshold="50" lower-threshold="50" scroll-left="300" scroll-with-animation enable-back-to-top>
+      <view bindtap='changeColor' class="{{item.isActive? 'active':''}}" data-id="{{item.id}}" wx:for='{{categoryList}}' wx:key='id'>
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <scroll-view class="category_detail" scroll-y upper-threshold="50" lower-threshold="50" scroll-top='{{count}}' scroll-with-animation enable-back-to-top>
+      <view class="detail_item" wx:for="{{detailList}}" wx:for-item="item1" wx:for-index="index1" wx:key="id">
+        <view class="detail_item_title">{{item1.title}}</view>
+        <view class="detail_item_image">
+          <navigator url="/pages/goods_list/index?id={{item2.id}}" wx:for="{{item1.children}}" wx:for-item="item2" wx:for-index="index2" wx:key="id">
+            <image src="{{item2.icon}}" mode="widthFix" />
+            <text>{{item2.name}}</text>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

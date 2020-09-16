@@ -1,0 +1,15 @@
+<TabList binditemchange='itemchange' list='{{tabList}}'>
+  <block>
+    <scroll-view class="scroll" scroll-y scroll-with-animation enable-back-to-top>
+      <view bindtap='goToDetail' wx:for="{{collect}}" wx:key="id" class="item">
+        <view class="image">
+          <image class="" src="{{item.imgs.img1}}" mode='scaleToFill' />
+        </view>
+        <view class="right">
+          <view class="title">{{item.title}}</view>
+          <view class="price">￥{{item.price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+</TabList>

@@ -1,0 +1,20 @@
+<TabList binditemchange='itemchange' list='{{tabList}}'>
+  <block>
+    <scroll-view class="scroll" scroll-y scroll-with-animation enable-back-to-top>
+      <view wx:for="{{data}}" wx:key="id" class="item">
+        <view class="item_header">
+          <text>订单编号</text>
+          <text>{{item.id}}</text>
+        </view>
+        <view class="item_con">
+          <text>订单价格</text>
+          <text>{{item.price}}</text>
+        </view>
+        <view class="item_footer">
+          <text>订单日期</text>
+          <text>{{item.createAt}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+</TabList>

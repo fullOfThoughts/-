@@ -1,0 +1,44 @@
+<!-- 引用组件 -->
+<SearchInput></SearchInput>
+<!-- 轮播图 -->
+<swiper style="height:300rpx" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay interval="5000" duration="1000" circular>
+  <swiper-item indicator-dots autoplay circular wx:for="{{imgList}}" wx:key='image'>
+    <image style="width:750rpx" mode="widthFix" src="{{item.image}}"></image>
+  </swiper-item>
+</swiper>
+<!-- 中间的秒杀 -->
+<view class="category_middle">
+  <navigator class="category_middle_item" url="">
+    <view>
+      <image src='../../images/q.png' mode="widthFix" />
+    </view>
+    <text>分类</text>
+  </navigator>
+  <navigator class="category_middle_item" url="">
+    <view>
+      <image src='../../images/w.png' mode="widthFix" />
+    </view>
+    <text>秒杀拍</text>
+  </navigator>
+  <navigator class="category_middle_item" url="">
+    <view>
+      <image src='../../images/e.png' mode="widthFix" />
+    </view>
+    <text>超市购</text>
+  </navigator>
+  <navigator class="category_middle_item" url="">
+    <view>
+      <image src='../../images/r.png' mode="widthFix" />
+    </view>
+    <text>母婴品</text>
+  </navigator>
+</view>
+<!-- 楼层 -->
+<view>
+  <view class="floor_item" wx:for='{{floorList}}' wx:for-item="item1" wx:for-index='index1' wx:key="title">
+    <view>{{item1.title}}</view>
+    <view class="floor_image">
+      <image mode="widthFix" src="{{value}}" wx:for="{{item1.list}}" wx:for-item="value" wx:for-index="key" wx:key="*this" />
+    </view>
+  </view>
+</view>

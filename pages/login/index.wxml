@@ -1,0 +1,3 @@
+<button open-type='getUserInfo' bindgetuserinfo='getUserInfo' style="margin-top:19rpx;width:80%" type="primary" plain="{{true}}" open-type="getUserInfo">
+  登录
+</button>

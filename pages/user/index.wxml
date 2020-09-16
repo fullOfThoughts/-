@@ -1,0 +1,67 @@
+<view class="top">
+  <view wx:if="{{userInfo.nickName}}">
+    <view class="kalak">
+      <image class="top_image" src='{{userInfo.avatarUrl}}' mode="scaleToFill" />
+    </view>
+    <view class="top_top">
+      <view class="top_top_zhong">
+        <image class="top_top_zhong_image" src="{{userInfo.avatarUrl}}" mode='scaleToFill' />
+      </view>
+      <view class="top_top_con">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:if="{{!userInfo.nickName}}" class="backup">
+    <button type="primary" plain="{{true}}" bindtap="getUserInfo">登录</button>
+  </view>
+  <view class="bottom">
+    <view class="bottom_item">
+      <text class="bottom_item_top">0</text>
+      <text class="bottom_item_bottom">收藏的店铺</text>
+    </view>
+    <view bindtap='collect' class="bottom_item">
+      <text class="bottom_item_top">{{collect}}</text>
+      <text class="bottom_item_bottom">收藏的商品</text>
+    </view>
+    <view class="bottom_item">
+      <text class="bottom_item_top">0</text>
+      <text class="bottom_item_bottom">关注的商品</text>
+    </view>
+    <view class="bottom_item">
+      <text class="bottom_item_top">0</text>
+      <text class="bottom_item_bottom">我的足迹</text>
+    </view>
+  </view>
+</view>
+<view class="footer">
+  <view class="footer_top">
+    <view class="footer_top_top">我的订单</view>
+    <view class="footer_top_bottom">
+      <view bindtap='allOrder' data-type="1" class="footer_top_bottom_item">
+        <view class="iconfont icon-dingdan"></view>
+        <view>全部订单</view>
+      </view>
+      <view bindtap='allOrder' data-type='2' class="footer_top_bottom_item">
+        <view class="iconfont icon-daifukuan"></view>
+        <view>待付款</view>
+      </view>
+      <view bindtap='allOrder' data-type='3' class="footer_top_bottom_item">
+        <view class="iconfont icon-daishouhuo"></view>
+        <view>待收货</view>
+      </view>
+      <view class="footer_top_bottom_item">
+        <view class="iconfont icon-tuikuan"></view>
+        <view>退款/退货</view>
+      </view>
+    </view>
+  </view>
+  <view class="footer_con1">收货地址管理</view>
+  <view class="footer_con2">
+    <view>
+      <text>联系客服</text>
+      <text>400-8888888</text>
+    </view>
+    <view>意见反馈</view>
+    <view>关于我们</view>
+  </view>
+  <view class="footer_footer">把应用推荐给其他人</view>
+</view>

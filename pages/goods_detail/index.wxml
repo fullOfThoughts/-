@@ -1,0 +1,54 @@
+<swiper class="goods_swiper" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay interval="5000" duration="1000" circular>
+  <swiper-item bindtap='preview' data-url='{{value}}' class="goods_swiper_item" wx:for="{{goodsData.imgs}}" wx:for-item="value" wx:for-index="key" wx:key="*this">
+    <image src="{{value}}" mode="widthFix" />
+  </swiper-item>
+</swiper>
+<view class="con">
+  <view class="con_top">￥{{goodsData.price}}</view>
+  <view class="con_bottom">
+    <view class="con_bottom_left">{{goodsData.title}}</view>
+    <view class="con_bottom_right {{isCollect?'active':''}}" bindtap='collect'>
+      <text class="iconfont icon-shoucang "></text>
+      <text>{{isCollect?'已收藏':"收藏"}}</text>
+    </view>
+  </view>
+</view>
+<view class="detail">
+  <view class="detail_title">图文详情</view>
+  <view class="detail_con">
+    <view style="height:400rpx;background:#FF6666;font-size:102rpx;line-height:400rpx;text-align:center">
+      高清大图
+    </view>
+    <view style="height:400rpx;background:#CC3333;font-size:102rpx;line-height:400rpx;text-align:center">
+      高清大图
+    </view>
+    <view style="height:400rpx;background:#FF9966;font-size:102rpx;line-height:400rpx;text-align:center">
+      高清大图
+    </view>
+    <view style="height:400rpx;background:#CC9999;font-size:102rpx;line-height:400rpx;text-align:center">
+      高清大图
+    </view>
+    <view style="height:400rpx;background:#FFFFCC;font-size:102rpx;line-height:400rpx;text-align:center">
+      高清大图
+    </view>
+  </view>
+</view>
+<!-- 固定视口 -->
+<view class="detail_footer">
+  <view>
+    <text class="iconfont icon-kefu"></text>
+    <text>联系客服</text>
+    <button open-type="contact"></button>
+  </view>
+  <view>
+    <text class="iconfont icon-fenxiang"></text>
+    <text>分享</text>
+    <button open-type='share'></button>
+  </view>
+  <view bindtap='shopping'>
+    <text class="iconfont icon-gouwuche1"></text>
+    <text>购物车</text>
+  </view>
+  <view bindtap='addCart'>加入购物车</view>
+  <view>立即购买</view>
+</view>

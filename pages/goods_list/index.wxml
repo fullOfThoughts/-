@@ -1,0 +1,23 @@
+<view>
+  <SearchInput></SearchInput>
+  <view>
+    <TabList binditemchange='switchItem' list='{{tabList}}'>
+      <block wx:if='{{index===1}}'>
+        <scroll-view scroll-y scroll-with-animation enable-back-to-top lower-threshold="{{100}}" bindscrolltolower='loadList' class="goods">
+          <navigator class="goods_item" wx:for="{{goodsList}}" wx:key="id" url="/pages/goods_detail/index?id={{item.id}}">
+            <view class="item_image">
+              <image src="{{item.image}}" mode="widthFix" />
+            </view>
+            <view class="item_con">
+              <view>{{item.name}}</view>
+              <view>{{item.detail}}</view>
+              <view>￥{{item.price}}</view>
+            </view>
+          </navigator>
+        </scroll-view>
+      </block>
+      <block wx:if='{{index===2}}'>2</block>
+      <block wx:if='{{index===3}}'>3</block>
+    </TabList>
+  </view>
+</view>
